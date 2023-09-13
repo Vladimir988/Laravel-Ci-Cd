@@ -7,7 +7,7 @@ services:
             - ./:/var/www
             - ./docker/nginx/conf.d:/etc/nginx/conf.d
         ports:
-            - "8080:80"
+            - "881:80"
         depends_on:
             - app
         container_name: laravel_vue_nginx
