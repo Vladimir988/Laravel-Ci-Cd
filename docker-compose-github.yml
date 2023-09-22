@@ -36,7 +36,7 @@ services:
         image: mysql:8.0
         restart: always
         volumes:
-            - /var/lib/mysql:/var/lib/mysql
+            - ./tmp/db:/var/lib/mysql
         environment:
             MYSQL_DATABASE: laravel_github
             MYSQL_ROOT_PASSWORD: root
