@@ -9,5 +9,5 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
-      - name: Copy .env.example to .env
+      - name: Copy .env.example11 to .env
         run: docker compose -p laravel_github -f docker-compose-github.yml up -d
