@@ -6,16 +6,6 @@ services:
         volumes:
             - ./:/var/www
             - ./docker/nginx/conf.d:/etc/nginx/conf.d
-        environment:
-          - APP_ENV=local
-          - APP_DEBUG=true
-          - APP_URL=195.201.134.92
-          - DB_CONNECTION=mysql
-          - DB_HOST=db
-          - DB_PORT=3306
-          - DB_DATABASE=laravel_github
-          - DB_USERNAME=root
-          - DB_PASSWORD=root
         ports:
             - "82:80"
         depends_on:
@@ -28,6 +18,16 @@ services:
             dockerfile: docker/github/Dockerfile
         volumes:
             - ./:/var/www
+        environment:
+          - APP_ENV=local
+          - APP_DEBUG=true
+          - APP_URL=195.201.134.92
+          - DB_CONNECTION=mysql
+          - DB_HOST=db
+          - DB_PORT=3306
+          - DB_DATABASE=laravel_github
+          - DB_USERNAME=root
+          - DB_PASSWORD=root
         depends_on:
             - db
         container_name: laravel_github
