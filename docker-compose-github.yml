@@ -15,7 +15,7 @@ services:
     app:
         build:
             context: .
-            dockerfile: docker/app/Dockerfile
+            dockerfile: docker/github/Dockerfile
         volumes:
             - ./:/var/www
         depends_on:
