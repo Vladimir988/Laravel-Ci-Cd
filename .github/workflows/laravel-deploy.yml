@@ -5,11 +5,11 @@ on:
     branches: [ master ]
 
 jobs:
+  build:
+
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
-      - name: Compile css and js
-        run: |
-          npm install
-          npm run prod
+      - name: Copy .env.example to .env
+        run: docker compose -p laravel_github -f docker-compose-github.yml up -d
